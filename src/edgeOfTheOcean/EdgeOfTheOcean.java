@@ -27,15 +27,37 @@ public class EdgeOfTheOcean {
 	return max - min - statues.length + 1;
   }
 
+  public boolean almostIncreasingSequence(int[] sequence) {
+	boolean flag = true;
+	int seq1 = 0;
+	int seq2 = 0;
+	for (int i = 0; i < sequence.length - 1; i++) {
+	  if (sequence[i] >= sequence[i + 1]) seq1++;
+	}
+	for (int k = 0; k < sequence.length - 2; k++) {
+	  if (sequence[k] >= sequence[k + 2]) seq2++;
+	}
+	if (seq1 + seq2 > 2) flag = false;
+	return flag;
+  }
+
+  int matrixElementsSum(int[][] matrix) {
+	//TODO
+	return 0;
+  }
 
   public static void main(String[] args) {
 	EdgeOfTheOcean edgeOfTheOcean = new EdgeOfTheOcean();
 
 	int[] inputArray = {5, 1, 2, 3, 1, 4};
 	int[] statues = {6, 2, 3, 8};
+	int[] sequences = {1, 2, 3, 4, 5, 3, 5, 6};
+	int[][] matrixs = {{0, 1, 1, 2}, {0, 5, 0, 0}, {2, 0, 3, 3}};
 
 	edgeOfTheOcean.adjacentElementsProduct(inputArray);
 	edgeOfTheOcean.shapeArea(9999);
 	edgeOfTheOcean.makeArrayConsecutive2(statues);
+	edgeOfTheOcean.almostIncreasingSequence(sequences);
+	edgeOfTheOcean.matrixElementsSum(matrixs);
   }
 }
