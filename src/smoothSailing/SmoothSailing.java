@@ -6,6 +6,13 @@ import java.util.List;
 
 public class SmoothSailing {
 
+  /* allLongestStrings:
+  Given an array of strings, return another array containing all of its longest strings.
+
+  Example:
+  For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
+  allLongestStrings(inputArray) = ["aba", "vcd", "aba"].
+  */
   public String[] allLongestStrings(String[] inputArray) {
 	int maxLength = 0;
 	List<String> list = new ArrayList<>(Arrays.asList(inputArray));
@@ -27,6 +34,15 @@ public class SmoothSailing {
 	return result;
   }
 
+  /* commonCharacterCount:
+  Given two strings, find the number of common characters between them.
+
+  Example:
+  For s1 = "aabcc" and s2 = "adcaa", the output should be
+  commonCharacterCount(s1, s2) = 3.
+
+  Strings have 3 common characters - 2 "a"s and 1 "c".
+  */
   public int commonCharacterCount(String s1, String s2) {
 	List<String> list1 = new ArrayList<>(Arrays.asList(s1.split("")));
 	List<String> list2 = new ArrayList<>(Arrays.asList(s2.split("")));
@@ -42,6 +58,18 @@ public class SmoothSailing {
 	return count;
   }
 
+  /* isLucky:
+  Ticket numbers usually consist of an even number of digits.
+  A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+
+  Given a ticket number n, determine if it's lucky or not.
+
+  Example:
+  For n = 1230, the output should be
+  isLucky(n) = true;
+  For n = 239017, the output should be
+  isLucky(n) = false.
+  */
   public boolean isLucky(int n) {
 /*
 	Cách 1:
@@ -68,6 +96,15 @@ String string = Integer.toString(n);
 	return sum == 0;
   }
 
+  /* sortByHeight:
+  Some people are standing in a row in a park. There are trees between them which cannot be moved.
+  Your task is to rearrange the people by their heights in a non-descending order without moving the trees.
+  People can be very tall!
+
+  Example:
+  For a = [-1, 150, 190, 170, -1, -1, 160, 180], the output should be
+  sortByHeight(a) = [-1, 150, 160, 170, -1, -1, 180, 190].
+  */
   public int[] sortByHeight(int[] a) {
 	//TODO
 	return null;
