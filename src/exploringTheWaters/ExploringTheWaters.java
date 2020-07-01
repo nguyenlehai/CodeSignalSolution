@@ -1,6 +1,6 @@
 package exploringTheWaters;
 
-import com.sun.deploy.util.ArrayUtil;
+import java.util.ArrayList;
 
 public class ExploringTheWaters {
 
@@ -35,7 +35,34 @@ addBorder(picture) = ["*****",
                       "*****"]
    */
   public String[] addBorder(String[] picture) {
-	return null;
+	/*Cach 1:
+
+	List<String> list = new ArrayList<>(Arrays.asList(picture));
+	int length = picture[0].length();
+	String star = "";
+
+	for (int i = 0; i < length + 2; i++) star += "*";
+
+	for (int i = 0; i < list.size(); i++) {
+	  list.set(i, "*" + list.get(i) + "*");
+	}
+
+	list.add(0, star);
+	list.add(list.size(), star);
+
+	return list.toArray(new String[0]);
+	 */
+
+	//Cach 2:
+	String[] framedPicture = new String[picture.length + 2];
+
+	for (int i = 0; i < picture.length; i++) {
+	  framedPicture[i + 1] = '*' + picture[i] + '*';
+	}
+
+	framedPicture[0] = framedPicture[picture.length + 1] = framedPicture[1].replaceAll("\\.", "*");
+
+	return framedPicture;
   }
 
   /* areSimilar:
@@ -60,8 +87,20 @@ areSimilar(a, b) = false.
 Any swap of any two elements either in a or in b won't make a and b equal.
    */
   public boolean areSimilar(int[] a, int[] b) {
-	return false;
-
+	ArrayList<Integer> arrayList = new ArrayList();
+	for (int i = 0; i < a.length; i++) {
+	  if (a[i] != b[i]) {
+		arrayList.add(i);
+	  }
+	}
+	if (arrayList.size() == 0)
+	  return true;
+	else if (arrayList.size() == 1 || arrayList.size() > 2) {
+	  return false;
+	} else if ((a[arrayList.get(0)] == b[arrayList.get(1)]) && (a[arrayList.get(1)] == b[arrayList.get(0)]))
+	  return true;
+	else
+	  return false;
   }
 
   /* arrayChange:
@@ -97,6 +136,14 @@ We can rearrange "aabb" to make "abba", which is a palindrome.
   }
 
   public static void main(String[] args) {
+	String[] addBorderArr = {"a"};
+//	int[] a = {832, 998, 148, 570, 533, 561, 894, 147, 455, 279};
+	int[] a = {1, 2, 3};
+	int[] b = {2, 1, 3};
+//	int[] b = {832, 570, 148, 998, 533, 561, 455, 147, 894, 279};
+
 	ExploringTheWaters exploringTheWaters = new ExploringTheWaters();
+	exploringTheWaters.addBorder(addBorderArr);
+	exploringTheWaters.areSimilar(a, b);
   }
 }
