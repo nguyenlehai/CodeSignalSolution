@@ -1,5 +1,8 @@
 package islandOfKnowledge;
 
+import java.nio.charset.StandardCharsets;
+import java.util.regex.Pattern;
+
 public class IslandOfKnowledge {
 
   /* boxBlur:
@@ -73,15 +76,108 @@ Photo: img/matrix.png
 
    */
   public int[][] minesweeper(boolean[][] matrix) {
-	return null;
+	int[][] result = new int[matrix.length][matrix[0].length];
+
+	for (int i = 0; i < matrix.length; i++) {
+	  for (int j = 0; j < matrix[0].length; j++) {
+		int near = 0;
+
+		if (i >= 1 && matrix[i - 1][j]) near++;
+		if (i + 1 < matrix.length && matrix[i + 1][j]) near++;
+		if (j >= 1 && matrix[i][j - 1]) near++;
+		if (j + 1 < matrix[0].length && matrix[i][j + 1]) near++;
+		if (i >= 1 && j >= 1 && matrix[i - 1][j - 1]) near++;
+		if (i >= 1 && j + 1 < matrix[0].length && matrix[i - 1][j + 1]) near++;
+		if (i + 1 < matrix.length && j >= 1 && matrix[i + 1][j - 1]) near++;
+		if (i + 1 < matrix.length && j + 1 < matrix[0].length && matrix[i + 1][j + 1]) near++;
+
+		result[i][j] = near;
+	  }
+	}
+	return result;
   }
 
+  /* variableName:
+  Correct variable names consist only of English letters, digits and underscores and they can't start with a digit.
+
+Check if the given string is a correct variable name.
+---------------
+Example:
+For name = "var_1__Int", the output should be
+variableName(name) = true;
+For name = "qq-q", the output should be
+variableName(name) = false;
+For name = "2w2", the output should be
+variableName(name) = false.
+   */
+  public boolean variableName(String name) {
+	return Pattern.matches("[a-zA-Z_][a-zA-Z0-9_]*$", name);
+  }
+
+  /* alphabeticShift:
+  Given a string, your task is to replace each of its characters by the next one in the English alphabet; i.e. replace a with b, replace b with c, etc (z would be replaced by a).
+--------------
+Example:
+For inputString = "crazy", the output should be alphabeticShift(inputString) = "dsbaz".
+   */
+  public String alphabeticShift(String inputString) {
+	/*
+	Cách 1:
+	byte[] bytes = inputString.getBytes(StandardCharsets.US_ASCII);
+	for (int i = 0; i < bytes.length; i++) {
+	  bytes[i]++;
+	}
+	return new String(bytes).replace("{", "a");
+	 */
+
+	//Cach 2:
+	char[] result = inputString.toCharArray();
+	for (int i = 0; i < result.length; ++i) {
+	  result[i]++;
+	  if (result[i] > 'z') {
+		result[i] = 'a';
+	  }
+	}
+	return new String(result);
+  }
+
+  /* chessBoardCellColor:
+  Given two cells on the standard chess board, determine whether they have the same color or not.
+-----------
+Example:
+For cell1 = "A1" and cell2 = "C3", the output should be
+chessBoardCellColor(cell1, cell2) = true.
+Photo: img/chess1.png
+
+For cell1 = "A1" and cell2 = "H3", the output should be
+chessBoardCellColor(cell1, cell2) = false.
+Photo: img/chess2.png
+
+   */
+  public boolean chessBoardCellColor(String cell1, String cell2) {
+	char result1 = cell1.charAt(0);
+	int a = result1 + cell1.charAt(1);
+
+	char result2 = cell2.charAt(0);
+	int b = result2 + cell2.charAt(1);
+
+	return Math.abs(a - b) % 2 == 0;
+  }
 
   public static void main(String[] args) {
 //	int[][] image = {{0, 18, 9}, {27, 9, 0}, {81, 63, 45}};
 	int[][] image = {{36, 0, 18, 9}, {27, 54, 9, 0}, {81, 63, 72, 45}};
+//	boolean[][] minesweeper = {{false, false, false}, {false, false, false}};
+	boolean[][] minesweeper = {{true, false, false}, {false, true, false}, {false, false, false}};
+	String name = "2h34";
+	String cell1 = "A1";
+	String cell2 = "B2";
 
 	IslandOfKnowledge islandOfKnowledge = new IslandOfKnowledge();
 	islandOfKnowledge.boxBlur(image);
+	islandOfKnowledge.minesweeper(minesweeper);
+	islandOfKnowledge.variableName(name);
+	islandOfKnowledge.alphabeticShift("crazy");
+	islandOfKnowledge.chessBoardCellColor(cell1, cell2);
   }
 }
