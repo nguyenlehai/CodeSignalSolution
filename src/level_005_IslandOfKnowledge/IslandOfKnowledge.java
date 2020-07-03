@@ -1,6 +1,5 @@
-package islandOfKnowledge;
+package level_005_IslandOfKnowledge;
 
-import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 
 public class IslandOfKnowledge {
@@ -165,9 +164,7 @@ Photo: img/chess2.png
   }
 
   public static void main(String[] args) {
-//	int[][] image = {{0, 18, 9}, {27, 9, 0}, {81, 63, 45}};
 	int[][] image = {{36, 0, 18, 9}, {27, 54, 9, 0}, {81, 63, 72, 45}};
-//	boolean[][] minesweeper = {{false, false, false}, {false, false, false}};
 	boolean[][] minesweeper = {{true, false, false}, {false, true, false}, {false, false, false}};
 	String name = "2h34";
 	String cell1 = "A1";

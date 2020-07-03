@@ -1,4 +1,4 @@
-package exploringTheWaters;
+package level_004_ExploringTheWaters;
 
 import java.util.ArrayList;
 
@@ -97,10 +97,7 @@ Any swap of any two elements either in a or in b won't make a and b equal.
 	  return true;
 	else if (arrayList.size() == 1 || arrayList.size() > 2) {
 	  return false;
-	} else if ((a[arrayList.get(0)] == b[arrayList.get(1)]) && (a[arrayList.get(1)] == b[arrayList.get(0)]))
-	  return true;
-	else
-	  return false;
+	} else return (a[arrayList.get(0)] == b[arrayList.get(1)]) && (a[arrayList.get(1)] == b[arrayList.get(0)]);
   }
 
   /* arrayChange:
@@ -112,6 +109,7 @@ For inputArray = [1, 1, 1], the output should be
 arrayChange(inputArray) = 3.
    */
   public int arrayChange(int[] inputArray) {
+    //TODO
 	return 0;
   }
 
@@ -132,6 +130,7 @@ palindromeRearranging(inputString) = true.
 We can rearrange "aabb" to make "abba", which is a palindrome.
    */
   public boolean palindromeRearranging(String inputString) {
+    //TODO
 	return false;
   }
 

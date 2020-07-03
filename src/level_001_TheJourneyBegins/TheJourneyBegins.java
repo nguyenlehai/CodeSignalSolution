@@ -1,4 +1,4 @@
-package theJourneyBegins;
+package level_001_TheJourneyBegins;
 
 public class TheJourneyBegins {
 

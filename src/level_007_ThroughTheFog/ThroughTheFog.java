@@ -1,4 +1,4 @@
-package throughTheFog;
+package level_007_ThroughTheFog;
 
 import java.util.ArrayList;
 import java.util.Collections;

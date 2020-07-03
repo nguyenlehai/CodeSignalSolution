@@ -1,4 +1,4 @@
-package edgeOfTheOcean;
+package level_002_EdgeOfTheOcean;
 
 public class EdgeOfTheOcean {
 

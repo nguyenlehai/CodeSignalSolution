@@ -1,4 +1,4 @@
-package smoothSailing;
+package level_003_SmoothSailing;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -116,12 +116,8 @@ String string = Integer.toString(n);
 	while (stringBuilder.indexOf("(") != -1) {
 	  start = stringBuilder.lastIndexOf("(");
 	  end = stringBuilder.indexOf(")", start);
-	  System.out.println(start);
-	  System.out.println(end);
-	  System.out.println(new StringBuilder(stringBuilder.substring(start + 1, end)));
 	  stringBuilder.replace(start, end + 1, new StringBuilder(stringBuilder.substring(start + 1, end)).reverse().toString());
 	}
-	System.out.println(stringBuilder);
 	return stringBuilder.toString();
   }
 
