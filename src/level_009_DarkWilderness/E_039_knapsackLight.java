@@ -23,13 +23,7 @@ knapsackLight(value1, weight1, value2, weight2, maxW) = 7.
 You can't take both items, but you can take any of them.
    */
   int knapsackLight(int value1, int weight1, int value2, int weight2, int maxW) {
-	if ((maxW == weight1 && weight2 < maxW)
-			|| (maxW == weight2 && weight1 < maxW)
-			|| (weight1 + weight2 > maxW && weight1 < maxW && weight2 < maxW)
-			|| (weight1 == maxW && weight1 == weight2)) {
-	  return Math.max(value1, value2);
-	}
-	if ((weight1 + weight2 == maxW) || (weight1 + weight2 < maxW)) {
+	if (weight1 + weight2 <= maxW) {
 	  return value1 + value2;
 	}
 	if (weight1 == maxW && weight2 > maxW) {
@@ -38,7 +32,9 @@ You can't take both items, but you can take any of them.
 	if (weight2 == maxW && weight1 > maxW) {
 	  return value2;
 	}
-	return 0;
+	if (weight1 > maxW && weight2 > maxW) {
+	  return 0;
+	}
+	return Math.max(value1, value2);
   }
-
 }
