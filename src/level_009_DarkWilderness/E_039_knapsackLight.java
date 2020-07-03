@@ -26,15 +26,16 @@ You can't take both items, but you can take any of them.
 	if (weight1 + weight2 <= maxW) {
 	  return value1 + value2;
 	}
-	if (weight1 == maxW && weight2 > maxW) {
-	  return value1;
-	}
-	if (weight2 == maxW && weight1 > maxW) {
-	  return value2;
-	}
 	if (weight1 > maxW && weight2 > maxW) {
 	  return 0;
+	}
+	if (weight1 <= maxW && weight2 > maxW) {
+	  return value1;
+	}
+	if (weight2 <= maxW && weight1 > maxW) {
+	  return value2;
 	}
 	return Math.max(value1, value2);
   }
 }
+
