@@ -10,5 +10,9 @@ public class Main {
 
 	E_045_buildPalindrome e_045_buildPalindrome = new E_045_buildPalindrome();
 	e_045_buildPalindrome.buildPalindrome("abcdc");
+
+	E_046_electionsWinners e_046_electionsWinners = new E_046_electionsWinners();
+	int[] electionsWinners = {1, 3, 3, 1, 1};
+	e_046_electionsWinners.electionsWinners(electionsWinners, 0);
   }
 }
