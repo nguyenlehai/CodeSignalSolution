@@ -12,13 +12,12 @@ buildPalindrome(st) = "abcdcba".
   public String buildPalindrome(String st) {
 	String result = st;
 	int flag = 0;
-	int lengthSt = st.length();
 
 	if (isPalindrome(st)) {
 	  return st;
 	}
 
-	while (flag < lengthSt - 1) {
+	while (true) {
 	  for (int i = flag; i >= 0; i--) {
 		result += st.charAt(i);
 	  }
@@ -28,7 +27,6 @@ buildPalindrome(st) = "abcdcba".
 		flag++;
 	  }
 	}
-	return "";
   }
 
   public boolean isPalindrome(String s) {
