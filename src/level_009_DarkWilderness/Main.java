@@ -9,6 +9,6 @@ public class Main {
 	e_039_knapsackLight.knapsackLight(10, 5, 6, 4, 8);
 
 	E_040_longestDigitsPrefix e_040_longestDigitsPrefix = new E_040_longestDigitsPrefix();
-	e_040_longestDigitsPrefix.longestDigitsPrefix("123aa1");
+	e_040_longestDigitsPrefix.longestDigitsPrefix("1230aa1");
   }
 }
