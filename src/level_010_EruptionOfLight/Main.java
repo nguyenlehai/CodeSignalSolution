@@ -7,5 +7,8 @@ public class Main {
 
 	E_044_findEmailDomain e_044_findEmailDomain = new E_044_findEmailDomain();
 	e_044_findEmailDomain.findEmailDomain("\"very.unusual.@.unusual.com\"@usual.com");
+
+	E_045_buildPalindrome e_045_buildPalindrome = new E_045_buildPalindrome();
+	e_045_buildPalindrome.buildPalindrome("abcdc");
   }
 }
