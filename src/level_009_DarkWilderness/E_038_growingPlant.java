@@ -25,16 +25,16 @@ growingPlant(upSpeed, downSpeed, desiredHeight) = 10.
 The plant first reaches a height of 910 on day 10.
    */
   int growingPlant(int upSpeed, int downSpeed, int desiredHeight) {
-	int afterDay = 0;
+	int afterDayHeight = 0;
 	int countDay = 0;
 
-	while (afterDay < desiredHeight) {
-	  afterDay += upSpeed;
+	while (afterDayHeight < desiredHeight) {
+	  afterDayHeight += upSpeed;
 	  countDay++;
-	  if (afterDay >= desiredHeight) {
+	  if (afterDayHeight >= desiredHeight) {
 		break;
 	  } else {
-		afterDay -= downSpeed;
+		afterDayHeight -= downSpeed;
 	  }
 	}
 	return countDay;

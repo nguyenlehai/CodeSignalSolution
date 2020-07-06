@@ -41,7 +41,7 @@ longestDigitsPrefix(inputString) = "123".
 	char[] arr = inputString.toCharArray();
 
 	for(char c : arr){
-	  if(c > 47 && c < 58){
+	  if(c > '0' && c < '9'){
 		res += c;
 	  }else{
 		return res;
