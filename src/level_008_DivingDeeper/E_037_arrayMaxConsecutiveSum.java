@@ -20,18 +20,18 @@ All possible sums of 2 consecutive elements are:
 Thus, the answer is 8.
    */
   public int arrayMaxConsecutiveSum(int[] inputArray, int k) {
-	ArrayList<Integer> arrayList = new ArrayList<>();
 	int lengthInputArr = inputArray.length;
 	int sum = 0;
+	int max = 0;
 
 	for (int i = 0; i <= lengthInputArr - k; i++) {
 	  for (int j = i; j < i + k; j++) {
 		sum += inputArray[j];
 	  }
-	  arrayList.add(sum);
+	  max = max > sum ? max : sum;
 	  sum = 0;
 	}
-	return Collections.max(arrayList);
+	return max;
   }
 }
 

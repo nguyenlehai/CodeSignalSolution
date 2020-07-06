@@ -13,10 +13,10 @@ differentSymbolsNaive(s) = 3.
 There are 3 different characters a, b and c.
    */
   public int differentSymbolsNaive(String s) {
-	ArrayList<Integer> arrayList = new ArrayList<>();
+	ArrayList<Character> arrayList = new ArrayList<>();
 	for (char c : s.toCharArray()) {
-	  if (!arrayList.contains((int) c)) {
-		arrayList.add((int) c);
+	  if (!arrayList.contains(c)) {
+		arrayList.add(c);
 	  }
 	}
 	return arrayList.size();
