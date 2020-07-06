@@ -7,5 +7,8 @@ public class Main {
 
 	E_039_knapsackLight e_039_knapsackLight = new E_039_knapsackLight();
 	e_039_knapsackLight.knapsackLight(10, 5, 6, 4, 8);
+
+	E_040_longestDigitsPrefix e_040_longestDigitsPrefix = new E_040_longestDigitsPrefix();
+	e_040_longestDigitsPrefix.longestDigitsPrefix("123aa1");
   }
 }
