@@ -9,14 +9,16 @@ Example:
 For st = "abcdc", the output should be
 buildPalindrome(st) = "abcdcba".
    */
-  String buildPalindrome(String st) {
+  public String buildPalindrome(String st) {
 	String result = st;
 	int flag = 0;
+	int lengthSt = st.length();
+
 	if (isPalindrome(st)) {
 	  return st;
 	}
 
-	while (!isPalindrome(result)) {
+	while (flag < lengthSt - 1) {
 	  for (int i = flag; i >= 0; i--) {
 		result += st.charAt(i);
 	  }
@@ -29,7 +31,7 @@ buildPalindrome(st) = "abcdcba".
 	return "";
   }
 
-  boolean isPalindrome(String s) {
+  public boolean isPalindrome(String s) {
 	int n = s.length();
 	for (int i = 0; i < (n / 2); ++i) {
 	  if (s.charAt(i) != s.charAt(n - i - 1)) {
