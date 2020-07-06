@@ -1,9 +1,5 @@
 package level_009_DarkWilderness;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-
 public class E_040_longestDigitsPrefix {
   /*
   Given a string, output its longest prefix which contains only digits.
