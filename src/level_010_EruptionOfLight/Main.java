@@ -14,5 +14,8 @@ public class Main {
 	E_046_electionsWinners e_046_electionsWinners = new E_046_electionsWinners();
 	int[] electionsWinners = {1, 3, 3, 1, 1};
 	e_046_electionsWinners.electionsWinners(electionsWinners, 0);
+
+	E_047_isMAC48Address e_047_isMAC48Address = new E_047_isMAC48Address();
+	e_047_isMAC48Address.isMAC48Address("00-1B-63-84-45-E6");
   }
 }
