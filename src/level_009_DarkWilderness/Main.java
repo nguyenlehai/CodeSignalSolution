@@ -13,5 +13,8 @@ public class Main {
 
 	E_041_digitDegree e_041_digitDegree = new E_041_digitDegree();
 	e_041_digitDegree.digitDegree(34);
+
+	E_042_bishopAndPawn e_042_bishopAndPawn = new E_042_bishopAndPawn();
+	e_042_bishopAndPawn.bishopAndPawn("a1", "c3");
   }
 }
