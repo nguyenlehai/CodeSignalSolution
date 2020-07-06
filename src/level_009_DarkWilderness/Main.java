@@ -10,5 +10,8 @@ public class Main {
 
 	E_040_longestDigitsPrefix e_040_longestDigitsPrefix = new E_040_longestDigitsPrefix();
 	e_040_longestDigitsPrefix.longestDigitsPrefix("1230aa1");
+
+	E_041_digitDegree e_041_digitDegree = new E_041_digitDegree();
+	e_041_digitDegree.digitDegree(34);
   }
 }
