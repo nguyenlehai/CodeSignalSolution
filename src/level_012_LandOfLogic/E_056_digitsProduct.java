@@ -18,12 +18,11 @@ digitsProduct(product) = -1.
   public int digitsProduct(int product) {
 	if (product == 0) return 10;
 	if (product == 1) return 1;
-
-	ArrayList<Integer> arrayList = new ArrayList<>();
+	String string = "";
 
 	for (int i = 9; i > 1; i--) {
 	  while (product % i == 0) {
-		arrayList.add(i);
+		string += i;
 		product /= i;
 	  }
 	}
@@ -31,13 +30,7 @@ digitsProduct(product) = -1.
 	if (product > 1) {
 	  return -1;
 	} else {
-	  StringBuilder result = new StringBuilder();
-	  Collections.reverse(arrayList);
-
-	  for (Object o : arrayList) {
-		result.append(o);
-	  }
-	  return Integer.parseInt(result.toString());
+	  return Integer.parseInt(new StringBuilder(string).reverse().toString());
 	}
   }
 }
