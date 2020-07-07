@@ -1,8 +1,5 @@
 package level_012_LandOfLogic;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class E_056_digitsProduct {
   /*
 Given an integer product, find the smallest positive (i.e. greater than 0) integer the product of whose digits is equal to product.
@@ -18,19 +15,21 @@ digitsProduct(product) = -1.
   public int digitsProduct(int product) {
 	if (product == 0) return 10;
 	if (product == 1) return 1;
-	String string = "";
+	int count = 1;
+	int result = 0;
 
 	for (int i = 9; i > 1; i--) {
 	  while (product % i == 0) {
-		string += i;
+		result += count * i;
 		product /= i;
+		count *= 10;
 	  }
 	}
 
 	if (product > 1) {
 	  return -1;
 	} else {
-	  return Integer.parseInt(new StringBuilder(string).reverse().toString());
+	  return result;
 	}
   }
 }
