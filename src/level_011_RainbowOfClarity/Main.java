@@ -10,5 +10,8 @@ public class Main {
 
 	E_050_chessKnight e_050_chessKnight = new E_050_chessKnight();
 	e_050_chessKnight.chessKnight("a1");
+
+	E_051_deleteDigit e_051_deleteDigit = new E_051_deleteDigit();
+	e_051_deleteDigit.deleteDigit(222219);
   }
 }
