@@ -9,11 +9,11 @@ For text = "Ready, steady, go!", the output should be
 longestWord(text) = "steady".
    */
   public String longestWord(String text) {
-	String[] array = text.replaceAll("[^a-zA-Z0-9]", " ").split(" ");
+	String[] arrTextAfterChange = text.replaceAll("[^a-zA-Z0-9]", " ").split(" ");
 	String result = "";
 	int lengthMax = 0;
 
-	for (String s : array) {
+	for (String s : arrTextAfterChange) {
 	  if (s.length() > lengthMax) {
 		result = s;
 		lengthMax = s.length();
