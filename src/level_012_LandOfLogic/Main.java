@@ -10,5 +10,10 @@ public class Main {
 
 	E_054_sumUpNumbers e_054_sumUpNumbers = new E_054_sumUpNumbers();
 	e_054_sumUpNumbers.sumUpNumbers("abcdefghijklmnopqrstuvwxyz1AbCdEfGhIjKlMnOpqrstuvwxyz23,74 -");
+
+	E_055_differentSquares e_055_differentSquares = new E_055_differentSquares();
+	int[][] matrix = {{2, 5, 3, 4, 3, 1, 3, 2}, {4, 5, 4, 1, 2, 4, 1, 3}, {1, 1, 2, 1, 4, 1, 1, 5},
+			{1, 3, 4, 2, 3, 4, 2, 4}, {1, 5, 5, 2, 1, 3, 1, 1}, {1, 2, 3, 3, 5, 1, 2, 4}};
+	e_055_differentSquares.differentSquares(matrix);
   }
 }
