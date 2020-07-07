@@ -7,5 +7,8 @@ public class Main {
 
 	E_053_validTime e_053_validTime = new E_053_validTime();
 	e_053_validTime.validTime("13:58");
+
+	E_054_sumUpNumbers e_054_sumUpNumbers = new E_054_sumUpNumbers();
+	e_054_sumUpNumbers.sumUpNumbers("abcdefghijklmnopqrstuvwxyz1AbCdEfGhIjKlMnOpqrstuvwxyz23,74 -");
   }
 }
