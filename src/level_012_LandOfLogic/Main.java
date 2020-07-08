@@ -18,5 +18,9 @@ public class Main {
 
 	E_056_digitsProduct e_056_digitsProduct = new E_056_digitsProduct();
 	e_056_digitsProduct.digitsProduct(12);
+
+	E_057_fileNaming e_057_fileNaming = new E_057_fileNaming();
+	String[] names = {"doc", "doc", "image", "doc(1)", "doc"};
+	e_057_fileNaming.fileNaming(names);
   }
 }
