@@ -34,13 +34,14 @@ fileNaming(names) = ["doc", "doc(1)", "image", "doc(1)(1)", "doc(2)"].
 	//Cách 2:
 	for (int i = 1; i < names.length; i++) {
 	  int count = 1;
-	  String string = names[i];
-	  for (int j = 0; j < i; j++)
-		if (names[j].equals(string)) {
-		  string = names[i] + "(" + (count++) + ")";
+	  String fileName = names[i];
+	  for (int j = 0; j < i; j++) {
+		if (names[j].equals(fileName)) {
+		  fileName = names[i] + "(" + (count++) + ")";
 		  j = -1;
 		}
-	  names[i] = string;
+	  }
+	  names[i] = fileName;
 	}
 	return names;
   }
