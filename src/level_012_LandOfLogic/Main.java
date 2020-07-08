@@ -25,5 +25,8 @@ public class Main {
 
 	E_058_messageFromBinaryCode e_058_messageFromBinaryCode = new E_058_messageFromBinaryCode();
 	e_058_messageFromBinaryCode.messageFromBinaryCode("010010000110010101101100011011000110111100100001");
+
+	E_059_spiralNumbers e_059_spiralNumbers = new E_059_spiralNumbers();
+	e_059_spiralNumbers.spiralNumbers(4);
   }
 }
