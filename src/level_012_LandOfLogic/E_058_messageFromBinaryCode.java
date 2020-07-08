@@ -20,14 +20,12 @@ Other letters can be obtained in the same manner.
   public String messageFromBinaryCode(String code) {
 	StringBuilder result = new StringBuilder();
 	int lengthName = code.length();
+
 	for (int i = 0; i < lengthName; i += 8) {
-	  StringBuilder stringBuilder = new StringBuilder();
-	  for (int j = i; j < i + 8; j++) {
-		stringBuilder.append(code.charAt(j));
-	  }
-	  result.append((char) Integer.parseInt(stringBuilder.toString(), 2));
+	  String string;
+	  string = code.substring(i, i + 8);
+	  result.append((char) Integer.parseInt(string, 2));
 	}
-	System.out.println(result.toString());
 	return result.toString();
   }
 }
